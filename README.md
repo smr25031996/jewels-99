@@ -1,4 +1,8 @@
 # Jewels99
+ ng build --base-href "https://smr25031996.github.io/jewels-99/"
+
+npx angular-cli-ghpages --dir=dist/jewels_99
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.13.
 

@@ -5,16 +5,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
+import { ProductsComponent } from './products/products.component';
+import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card'; // Import MatCardModule
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HomepageComponent,
-    NavigationBarComponent
+    NavigationBarComponent,
+    ProductsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

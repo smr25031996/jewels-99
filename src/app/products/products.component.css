@@ -1,0 +1,47 @@
+.container {
+  max-width: 100%;
+  padding: 10px;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+}
+
+.product-list {
+  display: grid; /* Use CSS Grid for the product list */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Create flexible grid columns */
+  gap: 10px;
+  justify-content: center; /* Center product cards horizontally */
+}
+
+.product-card {
+  background-color: #fff; /* Use a white background */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  transition: transform 0.2s ease-in-out;
+  text-align: center; /* Center text horizontally */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center content vertically */
+  cursor: pointer; /* Add a pointer cursor for hover effect */
+}
+
+.product-card:hover {
+  transform: scale(1.03); /* Slight scale on hover for an interactive effect */
+}
+
+.product-image {
+  max-width: 100%; /* Set the image width to 100% of its container */
+  max-height: 200px; /* Adjust as needed for image height */
+  object-fit: cover; /* Maintain image aspect ratio and cover the container */
+  border-radius: 8px;
+}
+
+.product-details {
+  margin-top: 10px;
+  font-size: 16px; /* Adjust text size as needed */
+}
+
+.pagination {
+  margin-top: 20px;
+  text-align: center;
+}
