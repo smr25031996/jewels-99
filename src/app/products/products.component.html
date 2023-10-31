@@ -1,17 +1,18 @@
 <main class="product-list">
-    <div class="product-card" *ngFor="let product of products">
-      <img src="../../assets/images/{{ product.name }}.jpg" alt="{{ product.name }}" class="product-image">
-      <div class="product-details">
-        <h2 class="product-name">{{ product.name }}</h2>
-        <p class="product-price">{{ product.price }}</p>
-        <div class="product-rating">{{ product.rating }}</div>
-        <!-- Add other product details as needed -->
-      </div>
+  <div class="product-card" *ngFor="let product of products">
+    <img
+      src="assets/images/{{ product.name }}.jpg"
+      alt="{{ product.name }}"
+      class="product-image"
+    />
+    <div class="product-details">
+      <h2 class="product-name">{{ product.name }}</h2>
+      <p class="product-price">{{ product.price }}</p>
+      <div class="product-rating">{{ product.rating }}</div>
+      <!-- Add other product details as needed -->
     </div>
-  </main>
-  <div class="pagination">
-    <!-- Add pagination controls here -->
   </div>
-
-
-  
+</main>
+<div class="pagination">
+  <!-- Add pagination controls here -->
+</div>
