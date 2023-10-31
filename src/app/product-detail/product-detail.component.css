@@ -1,0 +1,106 @@
+.product-card {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-image {
+    flex: 1;
+    margin-right: 16px;
+  }
+  
+  .product-image img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .product-details {
+    flex: 3;
+  }
+  
+  .product-title {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .product-description {
+    font-size: 14px;
+    margin-top: 8px;
+    text-align: left;
+  }
+  
+  .product-price {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 12px 0;
+  }
+  
+  .product-rating {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 8px;
+  }
+  
+  .product-rating span {
+    margin-left: 8px;
+  }
+  
+  .product-actions {
+    margin-top: 16px;
+  }
+  
+  .product-actions button {
+    margin-right: 16px;
+  }
+  
+  .user-reviews {
+    margin-top: 24px;
+    text-align: left;
+    font-size:large ;
+  }
+  
+  .user-review {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 16px;
+    margin-top: 16px;
+  }
+  
+  .user-avatar {
+    flex: 1;
+    margin-right: 16px;
+  }
+  
+  .user-avatar img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  .user-review-details {
+    flex: 3;
+  }
+  h1{
+    text-align: center;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    font-size: 16px;
+  }
+  
+  .user-rating mat-icon {
+    font-size: 16px;
+    color: #FFD700;
+  }
+  
+  .user-comment {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  

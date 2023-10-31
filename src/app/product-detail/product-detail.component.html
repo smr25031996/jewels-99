@@ -1,0 +1,50 @@
+<div class="product-card">
+  <div class="product-image">
+    <img src="assets/images/{{ product.name }}.jpg" alt="Product Image" />
+  </div>
+  <div class="product-details">
+    <h2 class="product-title">{{ product.name }}</h2>
+    <p class="product-rating">{{ product.rating }}</p>
+
+    <p class="product-price">{{ product.price | currency : "INR" }}</p>
+
+    <p class="product-description">
+      {{ product.description }}
+    </p>
+
+    <div class="product-actions">
+      <section>
+        <div class="example-button-row">
+          <button mat-raised-button color="accent" (click)="addToCart(product)">Add to cart</button>
+          <button mat-raised-button color="warn">Buy Now</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+<div class="user-reviews">
+  <h1>User Reviews</h1>
+  <div class="user-review">
+    <div class="user-avatar">
+      <img src="assets/images/man-user.jpeg" alt="User Avatar" width="50px" />
+    </div>
+    <div class="user-review-details">
+      <div class="user-info">
+        <span class="user-name">John Doe</span> &nbsp;&nbsp;
+        <span class="user-rating">
+          <mat-icon>star</mat-icon>
+          <mat-icon>star</mat-icon>
+          <mat-icon>star</mat-icon>
+          <mat-icon>star_half</mat-icon>
+          <mat-icon>star_outline</mat-icon>
+        </span>
+      </div>
+      <p class="user-comment">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam.
+      </p>
+    </div>
+  </div>
+  <!-- Add more user reviews here -->
+</div>

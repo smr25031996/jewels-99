@@ -1,0 +1,54 @@
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+mat-label {
+  color: #1976D2;
+}
+
+mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+mat-form-field.mat-form-field-appearance-legacy .mat-form-field-infix {
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+mat-input {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button {
+  width: 100%;
+  background-color: #1976D2;
+  color: #fff;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.signup-link {
+  margin-top: 10px;
+  color: #1976D2;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}

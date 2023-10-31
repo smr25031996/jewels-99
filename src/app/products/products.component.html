@@ -1,5 +1,5 @@
 <main class="product-list">
-  <div class="product-card" *ngFor="let product of products">
+  <div class="product-card" *ngFor="let product of products" routerLink="/detail/{{product.name}}">
     <img
       src="assets/images/{{ product.name }}.jpg"
       alt="{{ product.name }}"
@@ -7,12 +7,9 @@
     />
     <div class="product-details">
       <h2 class="product-name">{{ product.name }}</h2>
-      <p class="product-price">{{ product.price }}</p>
+      <p class="product-price">{{ product.price | currency:"INR" }}</p>
       <div class="product-rating">{{ product.rating }}</div>
       <!-- Add other product details as needed -->
     </div>
   </div>
 </main>
-<div class="pagination">
-  <!-- Add pagination controls here -->
-</div>

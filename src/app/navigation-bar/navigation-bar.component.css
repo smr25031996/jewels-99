@@ -1,0 +1,47 @@
+/* Define Airbnb's color palette */
+:root {
+  --airbnb-primary: #ff595a;      /* Airbnb's primary color */
+  --airbnb-secondary: #333;      /* Airbnb's secondary color */
+  --airbnb-text: #484848;        /* Airbnb's text color */
+  --airbnb-background: #f2f2f2;  /* Airbnb's background color */
+}
+a{
+  color: #ff595a;
+  text-decoration: none;
+
+}
+
+
+/* Align the entire toolbar to the right */
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px; /* Adjust the padding as needed */
+}
+
+/* Right-align the dropdown button for mobile and tablet */
+.mat-icon-button {
+  color: var(--airbnb-primary);
+  order: 1; /* Place it at the end of the toolbar */
+}
+
+/* Style the dropdown menu items */
+.mat-menu-content {
+  background-color: var(--airbnb-primary);
+  right: 0; /* Position the menu to the right */
+}
+
+.mat-menu-item {
+  color: var(--airbnb-secondary);
+  font-weight: 500;
+}
+
+.mat-menu-item:hover {
+  background-color: var(--airbnb-background);
+}
+
+.desktop-links{
+  font-size: medium;
+
+}
