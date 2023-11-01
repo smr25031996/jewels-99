@@ -1,5 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Product } from 'src/model/product';
 
 @Injectable({
@@ -7,7 +8,7 @@ import { Product } from 'src/model/product';
 })
 export class ProductService {
 
-  constructor() { }
+  constructor(private http:HttpClient) { }
   products = [
     {
       name: "Product 1",
@@ -428,7 +429,9 @@ export class ProductService {
 
   ]
 
-
+   getProducts():Observable<any>{
+    return this.http.get('http://localhost:3000/products')
+  }
   private cartItems: Product[] = [];
   private cartItemsSubject = new BehaviorSubject<Product[]>([]); 
    private cartCountSubject = new BehaviorSubject<number>(0);

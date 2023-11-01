@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { ProductService } from 'src/services/product.service';
+import { SignInComponent } from '../sign-in/sign-in.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-sign-up',
@@ -8,34 +11,32 @@ import { ProductService } from 'src/services/product.service';
 })
 export default class SignUpComponent implements OnInit {
 
-  form: any = {
-    username: null,
-    email: null,
-    password: null
-  };
-  isSuccessful = false;
-  isSignUpFailed = false;
-  errorMessage = '';
+  registrationForm: any;
 
-  constructor(private authService: ProductService) { }
+  constructor(public dialog: MatDialog,private formBuilder: FormBuilder) {
+    this.registrationForm = this.formBuilder.group({
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required, Validators.minLength(6)]],
+      confirmPassword: ['', [Validators.required]],
+    });
+  }
+
 
   ngOnInit(): void {
   }
+  onSubmit() {
+    if (this.registrationForm.valid) {
+      // Process the registration logic here
+      alert('Form submitted successfully!');
+      console.log(this.registrationForm.value);
+      this.dialog.closeAll()
 
-  onSubmit(): void {
-    const { username, email, password } = this.form;
-
-    // this.authService.register(username, email, password).subscribe(
-    //   data => {
-    //     console.log(data);
-    //     this.isSuccessful = true;
-    //     this.isSignUpFailed = false;
-    //   },
-    //   err => {
-    //     this.errorMessage = err.error.message;
-    //     this.isSignUpFailed = true;
-    //   }
-    // );
+    }
   }
-
+  
+  openDialog() {
+this.dialog.closeAll()
+    this.dialog.open(SignInComponent);
+  }
 }

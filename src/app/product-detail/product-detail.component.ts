@@ -29,6 +29,7 @@ export class ProductDetailComponent implements OnInit {
 
   addToCart(product: Product) {
     this.data.addToCart(product);
+    alert("added the jewellery");
   }
 
 }
