@@ -12,15 +12,15 @@ export class ProductsComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    // this.products = this.productService.products
+    this.products = this.productService.products
     // console.log(JSON.stringify(this.products))
-    // console.log(this.productService.getProducts()
+    console.log(this.productService.getProducts())
 
-this.productService.getProducts().subscribe(resp=>{
-  console.log(resp);
-   this.products=resp;
+// this.productService.getProducts().subscribe(resp=>{
+//   console.log(resp);
+//    this.products=resp;
   
-})
+// })
 
   }
 

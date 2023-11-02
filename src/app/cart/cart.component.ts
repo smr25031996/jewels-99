@@ -13,13 +13,16 @@ export class CartComponent implements OnInit {
   constructor(private cartService: ProductService) { }
   displayedColumns: string[] = ['image', 'name', 'price', 'quantity', 'total', 'action'];
   dataSource: any;
-
+  isEmpty: boolean = false;
 
 
 
   ngOnInit() {
     this.cartItems = this.cartService.getCartItems();
     this.dataSource = new MatTableDataSource(this.cartItems);
+    this.isEmpty=this.cartItems.length==0;
+    console.log(this.isEmpty);
+    console.log(JSON.stringify({name: 'Shubdhvbj', email: 'sjdbjs@ejdb', password: 'dnsjkbdjk', confirmPassword: 'BFbedkjsbjl'}))
   }
 
   incrementQuantity(item: any) {
@@ -37,7 +40,7 @@ export class CartComponent implements OnInit {
   removeItem(item: Product) {
     // Find the index of the item in the cartItems array
     const index = this.cartItems.findIndex((cartItem: Product) => cartItem === item);
-  
+
     if (index !== -1) {
       // If the item is found in the cartItems array, remove it
       this.cartItems.splice(index, 1);
@@ -47,7 +50,7 @@ export class CartComponent implements OnInit {
   getTotalPrice(item: Product): number {
     // Calculate the total price for an individual item
     return item.price * item.quantity;
-    
+
   }
   calculateTotalPrice(): number {
     // Calculate the total cart price

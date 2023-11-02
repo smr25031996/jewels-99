@@ -13,7 +13,7 @@ export default class SignUpComponent implements OnInit {
 
   registrationForm: any;
 
-  constructor(public dialog: MatDialog,private formBuilder: FormBuilder) {
+  constructor(public dialog: MatDialog,private formBuilder: FormBuilder,private postUser:ProductService) {
     this.registrationForm = this.formBuilder.group({
       name: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -28,8 +28,11 @@ export default class SignUpComponent implements OnInit {
   onSubmit() {
     if (this.registrationForm.valid) {
       // Process the registration logic here
-      alert('Form submitted successfully!');
       console.log(this.registrationForm.value);
+      this.postUser.postUser(this.registrationForm.value).subscribe((resp)=>{
+        alert(resp);
+
+      })
       this.dialog.closeAll()
 
     }

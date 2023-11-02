@@ -432,6 +432,10 @@ export class ProductService {
    getProducts():Observable<any>{
     return this.http.get('http://localhost:3000/products')
   }
+  postUser(user:any):Observable<any>{
+    return this.http.post('http://localhost:3000/register',user)
+
+  }
   private cartItems: Product[] = [];
   private cartItemsSubject = new BehaviorSubject<Product[]>([]); 
    private cartCountSubject = new BehaviorSubject<number>(0);

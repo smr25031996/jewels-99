@@ -1,4 +1,4 @@
-<div class="cart-container">
+<div class="cart-container" *ngIf="!isEmpty">
     <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
       <!-- Product Image Column -->
       <ng-container matColumnDef="image">
@@ -67,4 +67,14 @@
       </div>
     </div>
   </div>
+
+  <div class="empty-cart-container" *ngIf="isEmpty">
+    <div class="empty-cart-image">
+      <img src="assets/images/emptyCart.jpeg" alt="Empty Cart">
+    </div>
+    <h2>Your Cart is Empty</h2>
+    <p>Looks like you haven't added any items to your cart yet.</p>
+    <button class="shop-more-button" routerLink="">Shop More</button>
+  </div>
+  
   
